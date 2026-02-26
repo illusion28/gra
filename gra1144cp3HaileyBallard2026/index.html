@@ -12,8 +12,7 @@ body{
     background-size: cover;
     background-image: url("background.png");
     margin: 0;
-	height: 100vh;
-    cursor: url("pikachu.png"), auto;
+	cursor: url('pikachu.png'), auto;
 }
 wrapper {
     width: 1366px;
@@ -40,9 +39,9 @@ h3{
     font-family: "Tomorrow", sans-serif;
     font-size: 20px;
     color: #0C2778;
-    text-align: center;
     border: 4px inset #93191B;
     background-color: #A96364;
+    text-align: center;
 	}
 p{
     font-family: "Tomorrow", sans-serif;
@@ -62,27 +61,24 @@ p{
 	border-radius:10px;
 	box-sizing:border-box;	
 }	
-a {
+a{
     display: inline-block;
     padding: .5em;
     width: 203.812px;
     font-size: 2em;
     text-align: center;
-    font-family: "Tomorrow", sans-serif;
+   font-family: "Tomorrow", sans-serif;
     font-weight: 700;
     text-decoration: none;
     color: black;
     background-color: #C67273;
-}
-a:-webkit-any-link {
-    color: -webkit-link;
-    cursor: pointer;
-    text-decoration: underline;
+	text-decoration: underline;
+}    
 a:hover{
-		
+		color: #3F45A1;
 	}
 }
-ul {
+ul{
     list-style-type: disc;
 }
 h4{
@@ -103,9 +99,81 @@ h4{
 	box-sizing:border-box;
 	}
 .tumblr_3871502ac7980eeed97d394183b482bf_251720ea_1280{
-	display: inline-block;
-	border-radius:10px;
-	box-sizing:border-box;	
+    display: inline-block;
+    border-radius: 10px;
+    box-sizing: border-box;
+    width: 500
+	}
+.Lat{
+    width: 300px;
+    display: inline-block;
+    text-align: left;
+	}
+.los{
+    width: 300px;
+	}
+h1{
+	font-family: "Tomorrow", sans-serif;
+    font-size: 70px;
+    color: #0C2778;
+    text-align: center;
+    border: 4px inset #93191B;
+    background-color: #A96364;	
+	}
+.poll-option{
+    background: white;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    cursor: pointer;
+    border: 1px solid #c4daef;
+}
+.poll-option:hover{
+    transform: translateX(5px);
+    background: #eef7ff;
+    border-color: #5a9bd5;
+}
+.poll-option input[type="radio"]{
+    margin-right: 10px;
+    accent-color: #5a9bd5;
+}
+.vote-btn{
+    display: block;
+    width: 100%;
+    background: #5a9bd5;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+.vote-btn:hover{
+    background: #2c5282;
+}
+.poll-text {
+    font-family: "Tomorrow", sans-serif;
+	font-size: 1.1rem;     
+    font-weight: 600; 
+    color: #2c5282;  
+    letter-spacing: 0.5px;
+    display: flex; 
+    align-items: center;
+    cursor: pointer; 
+}
+.poll-option:hover .poll-text {
+    color: #e53e3e;
+}
+.KfXvQRQ{
+    display: inline-block;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 40px;
+    width: 700px;
+    text-align: center;
 	}
 </style>
 </head>
@@ -122,6 +190,7 @@ h4{
 		<a href="#synopsis">Synopsis</a>
 		<a href="#trailer">Trailer</a>
 		<a href="gallery">Gallery</a>
+		 <a href="poll">Poll</a>
 		  </ul>
 	  </nav>
 	  <img src="tumblr_3871502ac7980eeed97d394183b482bf_251720ea_1280.gif" class="tumblr_3871502ac7980eeed97d394183b482bf_251720ea_1280" />
@@ -135,7 +204,49 @@ h4{
 	  <h4>Every year the city of Alto Mare holds a special Water Pokémon race through its canal streets—and this time around, Ash and Misty are top competitors! Even though he doesn't win, Ash still finds his own special place in the heart of a mysterious girl that he rescues from two roguish women. But this isn't any ordinary girl—it's actually the Legendary Latias in disguise!
 	  </h4>
 	  <img src="LL.png" class="LL" />
-	  
+	  <h1>
+	  About The Legendaries...
+	  </h1>
+	  <img src="Lat.png" class="Lat" />
+	  <h3>
+	  The younger, more curious of the Eon duo. Latias is known for her playful nature and her &quot;Sight&quot; Sharing ability, which allows others to see what she sees.
+Personality: Innocent and trusting. She is fascinated by humans, often disguising herself as a girl named Bianca to wander the streets of Alto Mare.
+Role: She forms a deep, psychic bond with Ash, leading him to the Secret Garden and eventually seeking his help to save her brother.
+	  </h3>
+	  <img src="los.png" class="los" />
+	  <h3>
+	  The solemn protector of the Secret Garden and the Soul Dew. Latios is much more cautious and protective than his sister.
+Personality: Brave, selfless, and initially wary of outsiders. He values the safety of Alto Mare above his own life.
+Role: When the DMA (Defense Mechanism of Alto Mare) is activated, Latios endures immense pain to protect the city, ultimately making the ultimate sacrifice to stop a massive tidal wave.
+	  </h3>
+	  <div class="poll-container">
+  <h1>
+	Who Wil Your Favorite Be?
+	</h1>
+</div>
+	  <div class="poll-option">
+    <label class="poll-text">
+        <input type="radio" name="theory" value="latias"> 
+        <span>Definitely Latias!</span>
+    </label>
+</div>
+
+<div class="poll-option">
+    <label class="poll-text">
+        <input type="radio" name="theory" value="bianca"> 
+        <span>Definitely Latios!</span>
+    </label>
+</div>
+	  <div class="poll-option">
+    <label class="poll-text">
+        <input type="radio" name="theory" value="bianca"> 
+        <span>Can't Decide!</span>
+    </label>
+</div>
+	  <div>
+	  <button type="submit" class="vote-btn">Cast Your Vote!</button>
+</div>
+	  <img src="KfXvQRQ.gif" class="KfXvQRQ" />
 	</main>
   <footer>
 	  <p>&copy; 2026, Hailey Ballard. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
