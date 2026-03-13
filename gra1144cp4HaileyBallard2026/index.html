@@ -39,6 +39,7 @@ nav {
 nav ul {
 	padding: 0;
 	margin: 0;
+	text-align: 
 }
 ul a li {
 	padding: 20px 40px;
@@ -66,6 +67,127 @@ ul a li:hover {
 nav ul a {
 	color: #FFFFFF;
 }
+	.dots-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s;
+  text-decoration: none;
+}
+
+.dot:hover {
+  background-color: #717171;
+  transform: scale(1.2);
+}
+
+
+.dot:active {
+  background-color: #333;
+}
+
+
+@media (max-width: 600px) {
+  .arrow {
+    padding: 10px;
+    font-size: 16px;
+  }
+}
+	.carousel-wrapper {
+  max-width: 500px;
+  margin: auto;
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  border-radius: 8px;
+  -ms-overflow-style: none;  
+  scrollbar-width: none; 
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 50%;
+  line-height: 1;
+  transition: background 0.3s;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+	slide {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  position: relative;
+  overflow: hidden; 
+}
+
+
+.slide img {
+  width: 100%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease;
+  /
+  backface-visibility: hidden; 
+}
+
+
+.slide:hover img {
+  transform: scale(1.03);
+}
+
+
+.arrow {
+  transition: all 0.3s ease-in-out;
+  opacity: 0.7;
+}
+
+.arrow:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.9);
+  transform: translateY(-50%) scale(1.1); 
+}
+
+       
 </style>
 </head>
 
@@ -83,6 +205,33 @@ nav ul a {
       </nav>
       <h2>Home</h2>
 		<iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&showCalendars=0&showTz=0&src=aGZyb3N0eXdvbGZ5QGdtYWlsLmNvbQ&src=M2NkOTk3ZGVmYjQ0ZmU2NzU4MmEyM2FjNDU3MWU3NTIxODgzMTE0MjY3M2I0MGU1OGYyM2M0NDk5OWU4ZWMxN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039be5&color=%23e4c441&color=%230b8043" width="800" height="600" scrolling="no" frameborder="0" class="calendar" style="border:solid 1px #777"></iframe>
+		<div class="carousel-wrapper">
+  <div class="carousel">
+    <div id="slide-1" class="slide">
+      <img src="Sal.jpg" alt="Landscape">
+      <a href="#slide-3" class="arrow prev">&#10094;</a>
+      <a href="#slide-2" class="arrow next">&#10095;</a>
+    </div>
+
+    <div id="slide-2" class="slide">
+      <img src="Hamilton.jpg" alt="Mountain">
+      <a href="#slide-1" class="arrow prev">&#10094;</a>
+      <a href="#slide-3" class="arrow next">&#10095;</a>
+    </div>
+
+    <div id="slide-3" class="slide">
+      <img src="Madagascar.jpg" alt="Ocean">
+      <a href="#slide-2" class="arrow prev">&#10094;</a>
+      <a href="#slide-1" class="arrow next">&#10095;</a>
+    </div>
+  </div>
+
+  <div class="dots-container">
+    <a href="#slide-1" class="dot"></a>
+    <a href="#slide-2" class="dot"></a>
+    <a href="#slide-3" class="dot"></a>
+  </div>
+</div>
     </section>
  <section id="media">
       <nav>
