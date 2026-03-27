@@ -1,43 +1,316 @@
 @charset "UTF-8";
 body {
     margin: 0;
-    background-color: #720507;
-    background-image: url(url), -webkit-linear-gradient(270deg,rgba(115,7,9,1.00) 0%,rgba(69,5,6,1.00) 50.83%,rgba(193,17,17,1.00) 100%);
-    background-image: url(url), -moz-linear-gradient(270deg,rgba(115,7,9,1.00) 0%,rgba(69,5,6,1.00) 50.83%,rgba(193,17,17,1.00) 100%);
-    background-image: url(url), -o-linear-gradient(270deg,rgba(115,7,9,1.00) 0%,rgba(69,5,6,1.00) 50.83%,rgba(193,17,17,1.00) 100%);
-    background-image: url(url), linear-gradient(180deg,rgba(115,7,9,1.00) 0%,rgba(69,5,6,1.00) 50.83%,rgba(193,17,17,1.00) 100%);
-    height: 100vh;
     background-attachment: fixed;
+    background-clip: border-box;
+    background-size: cover;
+    height: 100vh;
+    background-image: url(BG.jpg);
 }
 wrapper {
     width: 1366px;
     margin: auto;
     display: block;
 }
-nav {
-    text-align: center;
-}
-.logo {
-    width: 200px;
+	.Logo{
     margin: 10px;
-    height: 200px;
     vertical-align: middle;
+    width: 246px;
+    height: 231px;
+    padding-top: 60px;
+    padding-left: 39px;
+    padding-right: 83px;
 }
-h1 {
+.Logo2{
     display: inline;
     color: #FFFFFF;
+    height: 162px;
+    width: 524px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 0px;
+    margin-top: 48px;
+    margin-left: -22px;
+    margin-right: -44px;
+    margin-bottom: -106px;
 }
-nav a li {
-    padding: 20px;
-    display: inline-block;
-    background-color: #FFFFFF;
-}
-nav a li:hover {
-    background-color: #2E2E2E;
-}
+
 main {
     height: 1000px;
 }
 footer {
     color: #FFFFFF;
+    text-align: center;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #000;
+  overflow: hidden; /* Hides the links as they exit the screen */
+  white-space: nowrap; /* Prevents links from wrapping to a new line */
+  padding: 20px 0;
+  z-index: 1000;
+}
+
+/* 1. Fix the bar to the top */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000; /* Black like Missy's site */
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 15px 0;
+  z-index: 1000;
+}
+
+/* 2. Style the links */
+.scroll-content a {
+  display: inline-block;
+  color: #fff;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 40px; /* Space between links */
+  font-size: 1.2rem;
+}
+
+/* 3. The Animation Track */
+.scroll-content {
+  display: inline-block;
+  animation: scroll-left 20s linear infinite;
+}
+
+/* 4. STOP on hover */
+.navbar:hover .scroll-content {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+/* 5. The Keyframes for smooth movement */
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); } 
+  /* -50% because we duplicated the list; 
+     it resets perfectly when the first half finishes */
+}
+.scroll-content {
+  display: inline-block;
+  /* 'linear' ensures the speed never changes */
+  animation: marquee 15s linear infinite; 
+}
+
+/* Stops the movement on hover */
+.navbar:hover .scroll-content {
+  animation-play-state: paused;
+}
+
+.nav-set a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 900;
+  font-family: 'Arial Black', sans-serif;
+  padding: 0 50px; /* Space between each link */
+  font-size: 1.5rem;
+}
+
+/* The Infinite Loop Logic */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Moves exactly half the width of the combined two sets */
+    transform: translateX(-50%);
+  }
+}
+.nav-set a {
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+
+.nav-set a:hover {
+  color: #00ff00; /* Neon green on hover */
+}
+.scroll-content a:hover {
+  color:#8B0608; /* Neon Pink */
+  text-shadow: 2px 2px #ffffff; /* Neon Blue shadow */
+}
+.gif{
+    position: relative;
+    bottom: 50.5px;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    padding-top: 51px;
+}.breach {
+    margin-left: 331px;
+}
+.vinyl-record {
+    position: absolute;
+    width: 36%;
+    height: 63%;
+    border-radius: 111%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Keeps the image circular */
+    /* 1. Image + Groove Overlay */
+    background-image: 
+    /* The "Grooves" Overlay (Semi-transparent) */
+    repeating-radial-gradient(
+      circle,
+      rgba(0,0,0,0.1),
+      rgba(0,0,0,0.1) 2px,
+      rgba(255,255,255,0.05) 4px,
+      rgba(0,0,0,0.1) 5px
+    ),
+    /* Your Image */
+    var(--bg-image);
+    background-size: cover;
+    background-position: center;
+    /* Add a subtle plastic shine */
+    box-shadow: inset 0 0 80px rgba(0,0,0,0.4);
+    padding-bottom: 0px;
+    padding-left: 2px;
+    margin-left: 706px;
+    margin-top: -241px;
+}
+
+/* Make the label slightly transparent or smaller so the art shows through */
+.record-label {
+    width: 22px;
+    height: 19px;
+    background: rgba(255, 255, 255, 0.8) !important; /* Semi-transparent */
+    backdrop-filter: blur(2px); /* Modern glass effect */
+    border-radius: 50%;
+    border: 2px solid #000;
+    z-index: 2;
+}
+.vinyl-record::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 50%;
+  
+  /* This creates two diagonal 'shines' */
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(255,255,255,0.1) 45deg,
+    transparent 90deg,
+    transparent 180deg,
+    rgba(255,255,255,0.1) 225deg,
+    transparent 270deg
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+:root {
+  --record-size: 300px;
+    margin-top: -7px;
+}
+.vinyl-container {
+    width: var(--record-size);
+    height: var(--record-size);
+    position: relative;
+    cursor: pointer;
+    padding-left: 119px;
+    padding-bottom: 151px;
+    padding-right: 0px;
+}
+
+/* Common Record Style */
+.side-a, .side-b {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* The Flip Transition */
+    transition: transform 0.4s ease-in-out, opacity 0.4s;
+    /* The Constant Spin */
+    animation: spin 4s linear infinite;
+    padding-left: 0px;
+}
+
+/* Side B is hidden and "flattened" by default */
+.side-b {
+  opacity: 0;
+  transform: scaleX(0); 
+}
+
+/* HOVER LOGIC */
+/* Flatten Side A and hide it */
+.vinyl-container:hover .side-a {
+    opacity: 0;
+    transform: scaleX(0);
+    padding-left: 0px;
+}
+
+/* Expand Side B and show it */
+.vinyl-container:hover .side-b {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+/* Standard Rotation Animation */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Side B needs a special spin so the scaleX(1) doesn't fight the rotation */
+/* We use a wrapper or just combine the transforms */
+.vinyl-container:hover .side-b {
+  animation: spin-and-flip 4s linear infinite;
+}
+
+@keyframes spin-and-flip {
+  from { transform: scaleX(1) rotate(0deg); }
+  to { transform: scaleX(1) rotate(360deg); }
+}
+.album{
+    width: 453px;
+    margin-left: 73px;
+    margin-top: 38px;
+    margin-bottom: 95px;
+}
+.al{
+    margin-left: 180px;
+    margin-top: -809px;
+    width: 453px;
+    margin-bottom: 371px;
+}
+h2{
+    color: #A6171A;
+    text-align: center;
+    font-size: 40px;
+    margin-top: -33px;
+}
+.party{
+    margin-left: 64px;
+    margin-top: -12px;
+    margin-bottom: 308px;
+}
+h1{
+    color: #FFFFFF;
+    margin-left: 100px;
+    margin-bottom: 25px;
+    margin-top: 24px;
+    margin-right: -19px;
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+}
+h3{
+    color: #A6171A;
+    margin-top: -43px;
+    margin-left: 902px;
+    margin-bottom: -34px;
+    font-size: 41px;
 }

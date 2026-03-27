@@ -11,11 +11,13 @@
 </head>
 
 <body>
-<wrapper>
-  <header><img src="" alt="" width="" height="" class="logo">
-    <h1>Twenty One Pilots</h1>
+	<wrapper>
+  <header><img src="Logo.png" alt="" width="" height="" class="Logo">
+    <img src="Logo 2.jpg" class="Logo2" >
   </header>
-  <nav>
+  <nav class="navbar">
+	  <div class="scroll-content">
+	<span class="nav-set">
    <a href="index.html"> <li>Home</li></a>
 	<a href="news.html"> <li>News</li></a>
 	<a href="music.html"> <li>Music Store</li></a>
@@ -26,10 +28,191 @@
 	 <a href="merch.html"><li>Merch Store</li></a>
 	<a href="blog.html"> <li>Blog</li></a>
 	<a href="privacy.html"><li>Privacy Statement</li></a>
-  </nav>
-  <!-- InstanceBeginEditable name="EditRegion1" -->
+ </span>
+		<span class="nav-set">
+		<a href="index.html"> <li>Home</li></a>
+	<a href="news.html"> <li>News</li></a>
+	<a href="music.html"> <li>Music Store</li></a>
+	<a href="videos.html"> <li>Videos</li></a>
+	 <a href="concerts.html"><li>Concerts</li></a>
+	<a href="photos.html"> <li>Photo Gallery</li></a>
+	 <a href="mailing.html"><li>Join Mailing List</li></a>
+	 <a href="merch.html"><li>Merch Store</li></a>
+	<a href="blog.html"> <li>Blog</li></a>
+	<a href="privacy.html"><li>Privacy Statement</li></a>
+	</span>	
+  </div>
+	</nav>
+    <!-- InstanceBeginEditable name="EditRegion1" -->
   <main>
     <h2>Music Store</h2>
+	   <h3>Breach Limited Edition Hazard Splatter Vinyl</h3>
+	  <img src="Breach Listening Party.jpg" class="party">
+	  <img src="061225_BREACH_SF_D2C3-1.png" class="album">
+	    <h1>Twenty One Pilots'Breach'LP (Red Vinyl)</h1>
+	 <div class="record-player-base">
+  <div class="tonearm"></div>
+
+  <div class="vinyl-container">
+    <div class="flip-inner">
+      
+      <div class="vinyl-record side-a" style="--bg-image: url('1000020548-Recovered.png');">
+        <div class="record-label"></div>
+      </div>
+      
+      <div class="vinyl-record side-b" style="--bg-image: url('1000020552-Recovered.png');">
+        <div class="record-label"></div>
+      </div>
+
+    </div>
+  </div>
+</div>
+	<img src="shopping.png" class="al">
+    <style>
+        /* --- General Page Styling --- */
+		body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 { opacity: 0.6; font-weight: 300; letter-spacing: 2px; }
+
+        /* --- Music Button Styling --- */
+        .music-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .music-btn:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        /* The Speaker Icon */
+        .speaker-base {
+            width: 10px;
+            height: 10px;
+            background: white;
+            position: relative;
+            margin-right: 5px;
+        }
+
+        .speaker-base::after {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: -7px;
+            border-top: 12px solid transparent;
+            border-bottom: 12px solid transparent;
+            border-right: 14px solid white;
+        }
+
+        /* Animated Waves */
+        .waves {
+            position: relative;
+            width: 15px;
+            height: 20px;
+        }
+
+        .waves span {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            border-right: 2px solid white;
+            border-radius: 0 50% 50% 0;
+            opacity: 0;
+        }
+
+        .wave-1 { width: 6px; height: 12px; }
+        .wave-2 { width: 12px; height: 20px; }
+
+        /* Animation Trigger */
+        .music-btn:not(.muted) .wave-1 { animation: wave-pulse 1.2s infinite 0.1s; }
+        .music-btn:not(.muted) .wave-2 { animation: wave-pulse 1.2s infinite 0.4s; }
+
+        @keyframes wave-pulse {
+            0% { opacity: 0; transform: translateY(-50%) scale(0.8); }
+            50% { opacity: 1; }
+            100% { opacity: 0; transform: translateY(-50%) scale(1.2); }
+        }
+
+        /* Mute Slash Styling */
+        .music-btn.muted::before {
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 2px;
+            background: #ff4d4d;
+            transform: rotate(-45deg);
+            z-index: 10;
+            box-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+
+        .music-btn.muted .waves { opacity: 0; }
+    </style>
+
+
+    <audio id="bg-music" loop>
+        <source src="Twenty One Pilots - Robot Voices [Lyrics].mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-control" class="music-btn muted" title="Toggle Music">
+        <div class="speaker-base"></div>
+        <div class="waves">
+            <span class="wave-1"></span>
+            <span class="wave-2"></span>
+        </div>
+    </button>
+
+    <script>
+        const music = document.getElementById('bg-music');
+        const btn = document.getElementById('music-control');
+        const maxVolume = 0.3; // Set your desired max volume here
+        let fadeInterval;
+
+        btn.addEventListener('click', () => {
+            if (music.paused) {
+                // Start Playing
+                music.play();
+                btn.classList.remove('muted');
+                
+                // Reset volume for Fade-In
+                music.volume = 0;
+                clearInterval(fadeInterval);
+                
+                fadeInterval = setInterval(() => {
+                    if (music.volume < maxVolume) {
+                        music.volume = Math.min(maxVolume, music.volume + 0.01);
+                    } else {
+                        clearInterval(fadeInterval);
+                    }
+                }, 50);
+                
+            } else {
+                // Pause Immediately
+                music.pause();
+                btn.classList.add('muted');
+                clearInterval(fadeInterval);
+            }
+        });
+    </script>
+
+
   </main>
   <!-- InstanceEndEditable -->
 <footer><p>&copy; 2026, Hailey Ballard. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p></footer>
