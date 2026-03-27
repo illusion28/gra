@@ -37,6 +37,9 @@ wrapper {
 
 main {
     height: 1000px;
+    background-size: cover;
+    background-position: center 0%;
+    margin-top: 31px;
 }
 footer {
     color: #FFFFFF;
@@ -145,7 +148,12 @@ footer {
     overflow: clip;
     padding-top: 51px;
 }.breach {
-    margin-left: 331px;
+    margin-left: 18px;
+    text-align: left;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-bottom: 17px;
+    padding-right: 0px;
 }
 .vinyl-record {
     position: absolute;
@@ -289,8 +297,20 @@ footer {
 h2{
     color: #A6171A;
     text-align: center;
-    font-size: 40px;
+    font-size: 48px;
     margin-top: -33px;
+    font-family: arial narrow;
+    font-style: bold;
+}
+.home h2 {
+    padding-left: 845px;
+    padding-bottom: 13px;
+    margin-top: -164px;
+    text-align: center;
+    font-size: 128px;
+    font-family: carol gothic;
+    font-style: compressed;
+    text-indent: 0px;
 }
 .party{
     margin-left: 64px;
@@ -313,4 +333,29 @@ h3{
     margin-left: 902px;
     margin-bottom: -34px;
     font-size: 41px;
+}
+.home {
+    background-image: url(34080.gif);
+    background-size: cover;
+}
+.news {
+    background-image: url(ezgif-593490fc3dcdc74e.gif);
+    background-size: cover;
+    background-position: center 0%;
+}
+.music h3 {
+}
+.music h1 {
+}
+.concerts {
+    background-image: url(TOP-home.jpg);
+}
+.concerts h3 {
+    font-family: carol gothic;
+    font-style: compressed;
+    margin-top: -22px;
+    margin-left: 60px;
+    width: 451px;
+    height: 9px;
+    color: #FFFFFF;
 }
