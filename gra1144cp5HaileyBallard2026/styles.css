@@ -37,9 +37,6 @@ wrapper {
 
 main {
     height: 1000px;
-    background-size: cover;
-    background-position: center 0%;
-    margin-top: 31px;
 }
 footer {
     color: #FFFFFF;
@@ -141,19 +138,8 @@ footer {
   color:#8B0608; /* Neon Pink */
   text-shadow: 2px 2px #ffffff; /* Neon Blue shadow */
 }
-.gif{
-    position: relative;
-    bottom: 50.5px;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-    padding-top: 51px;
-}.breach {
-    margin-left: 18px;
-    text-align: left;
-    padding-top: 0px;
-    padding-left: 0px;
-    padding-bottom: 17px;
-    padding-right: 0px;
+.breach {
+    margin-left: 22px;
 }
 .vinyl-record {
     position: absolute;
@@ -298,19 +284,8 @@ h2{
     color: #A6171A;
     text-align: center;
     font-size: 48px;
-    margin-top: -33px;
-    font-family: arial narrow;
-    font-style: bold;
-}
-.home h2 {
-    padding-left: 845px;
-    padding-bottom: 13px;
-    margin-top: -164px;
-    text-align: center;
-    font-size: 128px;
-    font-family: carol gothic;
-    font-style: compressed;
-    text-indent: 0px;
+    margin-top: -8px;
+    font-family: brokenscript OT;
 }
 .party{
     margin-left: 64px;
@@ -337,6 +312,13 @@ h3{
 .home {
     background-image: url(34080.gif);
     background-size: cover;
+    background-position: center 0%;
+}
+.home h2 {
+    font-family: brokenscript OT;
+    margin-left: 707px;
+    font-size: 114px;
+    margin-top: -144px;
 }
 .news {
     background-image: url(ezgif-593490fc3dcdc74e.gif);
@@ -349,13 +331,394 @@ h3{
 }
 .concerts {
     background-image: url(TOP-home.jpg);
+    padding-top: 4px;
+    background-size: cover;
+    background-position: center 0%;
 }
 .concerts h3 {
-    font-family: carol gothic;
-    font-style: compressed;
+    font-family: brokenscript OT;
     margin-top: -22px;
-    margin-left: 60px;
-    width: 451px;
+    margin-left: 38px;
+    width: 531px;
     height: 9px;
     color: #FFFFFF;
+}
+.music {
+}
+iframe {
+    margin-left: 72px;
+    padding-top: 72px;
+}
+.carousel-container {
+    max-width: 772px;
+    margin-top: 106px;
+    margin-right: 162px;
+    margin-left: 259px;
+    margin-bottom: 141px;
+    position: relative;
+    padding-top: 0px;
+    width: 895px;
+    height: 134px;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: hidden; /* Changed to hidden to hide the scrollbar */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    margin-top: -244px;
+    padding-top: 239px;
+    width: 1129px;
+    height: 788px;
+    margin-left: -144px;
+    margin-bottom: 7px;
+    padding-bottom: 17px;
+}
+
+.slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  position: relative; /* Essential for positioning arrows */
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+}
+
+/* Arrow Styling */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+  user-select: none;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev { left: 10px; border-radius: 0 3px 3px 0; }
+.next { right: 10px; border-radius: 3px 0 0 3px; }
+
+.slide img {
+  width: 100%;             /* Fills the width of the slide */
+  aspect-ratio: 16 / 9;    /* Forces a specific shape (change to 1/1 for square) */
+  object-fit: cover;       /* Like a background image: fills the area without stretching */
+  display: block;          /* Removes tiny gaps at the bottom of images */
+  border-radius: 8px;      /* Optional: makes it look a bit cleaner */
+}
+.vid {
+    margin-top: -32px;
+    margin-left: 448px;
+    height: 222px;
+    padding-bottom: 16px;
+}
+.post-card {
+    background-color: #830F11;
+    border: 2px solid #4D0000; /* Neon "Neon Green" border */
+    border-radius: 0; /* Sharp edges feel more "underground" */
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 8px 8px 0px #7D0000; /* Retro "pop-out" shadow */
+    height: 622px;
+    -webkit-box-shadow: 8px 8px 0px #7D0000;
+}
+.post-content h3 {
+    margin-left: 32px;
+    margin-top: -4px;
+    color: #000000;
+}
+.post-img {
+    margin-top: 42px;
+}
+
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  float: left;
+  margin-right: 12px;
+}
+
+.timestamp {
+  color: #888;
+  font-size: 0.8rem;
+  display: block;
+}
+.fan-card {
+  background: #ffffff;
+  color: #1a1a1a;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  max-width: 350px;
+  transform: rotate(-1deg); /* Slight tilt for a 'scrapbook' look */
+  transition: transform 0.3s ease;
+}
+
+.fan-card:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.fan-image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.fan-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff0055; /* Artist's accent color */
+    color: white;
+    padding: 4px 10px;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 13px;
+}.request-section {
+    background: #000;
+    color: #fff;
+    padding: 30px;
+    border: 2px dashed #444; /* Looks like a ticket stub border */
+    border-radius: 15px;
+    text-align: center;
+    margin-top: -19px;
+    height: 366px;
+}
+
+.request-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 42px;
+}
+
+.input-group {
+    text-align: left;
+    margin-top: 25px;
+    margin-bottom: 11px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  background: #222;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.submit-btn {
+    background-color: #C50003;
+    border: none;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: opacity 0.3s;
+    margin-top: 12px;
+}
+
+.submit-btn:hover {
+  opacity: 0.8;
+}.sticker-wall {
+    display: grid;
+    /* This keeps images EXACTLY 150px wide, no matter the screen size */
+    grid-template-columns: repeat(auto-fill, 150px);
+    gap: 20px;
+    justify-content: center; /* Centers the whole collection */
+    padding-top: 53px;
+    padding-right: 53px;
+    padding-left: 53px;
+    padding-bottom: 53px;
+    margin-top: 10px;
+    margin-left: 430px;
+}
+
+.art-thumb {
+  width: 150px; /* Fixed width */
+  background: white;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+.art-thumb img {
+  width: 100%; /* Fills the 150px container */
+  height: 150px; /* Force a square aspect ratio */
+  object-fit: cover; /* Prevents squishing the art */
+  border-radius: 2px;
+}
+
+.artist-tag {
+  display: block;
+  font-size: 10px;
+  text-align: center;
+  margin-top: 5px;
+  font-family: 'Courier New', monospace;
+  color: #888;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Keeps long names from breaking the box */
+  white-space: nowrap;
+}
+
+/* Hover effect: The 'Sticker' lift */
+.art-thumb:hover {
+  transform: scale(1.1) rotate(2deg);
+  z-index: 5;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}/* Adding a small badge that appears on hover */
+.art-thumb::after {
+  content: "View Art";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.art-thumb:hover::after {
+  opacity: 1;
+}
+.keychain {
+    width: 450px;
+    height: 437px;
+    margin-top: -32px;
+}
+.shirt {
+    margin-left: 867px;
+    margin-top: -543px;
+    width: 472px;
+}
+.hoodie {
+    width: 472px;
+    margin-top: -26px;
+}
+.flag {
+    width: 472px;
+    margin-left: 380px;
+    margin-top: 8px;
+}
+main h3 {
+    margin-left: 83px;
+    padding-top: 78px;
+}
+.newsletter-container {
+    background-position: 0%;
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    border-radius: 8px;
+    margin-top: 105px;
+}
+
+.newsletter-content h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.newsletter-content p {
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Input Fields */
+.newsletter-form input, 
+.newsletter-form select {
+  padding: 12px 15px;
+  border: 1px solid #333;
+  background: #252525;
+  color: white;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Call to Action Button */
+.subscribe-btn {
+  padding: 12px;
+  background-color: #ff3e3e; /* Accent color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.subscribe-btn:hover {
+    background-color: #DA1111;
+    transform: translateY(-2px);
+}
+
+.privacy-note {
+    display: block;
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #000000;
+}
+.request-section h3 {
+    margin-left: -13px;
+    padding-top: 38px;
+    margin-bottom: 18px;
+}
+
+/* Tablet/Desktop Layout */
+@media (min-width : 2113px ){
+  .newsletter-form {
+    flex-direction: row;
+    max-width: 600px;
+  }
+  .newsletter-form input { flex: 2; }
+  .newsletter-form select { flex: 1; }
+}
+.newsletter-container {
+    border: 2px solid #7D0000; /* Matrix Green or Neon Pink */
+    box-shadow: 0 0 10px #540405,inset 0 0 5px #00ff41;
+    background-color: #830F11;
+    -webkit-box-shadow: 0 0 10px #540405,inset 0 0 5px #00ff41;
+}
+
+.subscribe-btn {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background-color: #611313; /* Neon Magenta */
+    box-shadow: 4px 4px 0px #FF0000; /* Cyberpunk offset shadow */
+    -webkit-box-shadow: 4px 4px 0px #FF0000;
+}
+
+.subscribe-btn:hover {
+  filter: hue-rotate(45deg); /* Shifts the color on hover for a trippy effect */
 }
