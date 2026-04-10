@@ -7,7 +7,6 @@
 body {
     margin: 0;
     background-color: lightgray;
-	font-family: "Helvetica Neue", Arial, sans-serif;
 }
 wrapper {
     margin: auto;
@@ -55,6 +54,10 @@ button:hover {
   --zumiez-red: #d0021b; /* Used for Sale text */
 }
 
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
 
 .header-container {
   max-width: 1200px;
@@ -87,10 +90,10 @@ button:hover {
 }
 
 .logo {
-    font-size: 61px;
-    font-weight: 900;
-    letter-spacing: -1px;
-    cursor: pointer;
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  cursor: pointer;
 }
 
 .search-container {
@@ -100,12 +103,10 @@ button:hover {
 }
 
 .search-container input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    outline: none;
-    font-size: 17px;
-    font-style: italic;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
 }
 
 .search-btn {
@@ -156,11 +157,10 @@ button:hover {
 /* Label above the size buttons */
 .zu-option-label {
     display: block;
-    font-size: 19px;
+    font-size: 13px;
     font-weight: 700;
     margin-bottom: 8px;
     text-transform: uppercase;
-    font-family: "Hammersmith One", sans-serif;
 }
 
 /* Flex group for size buttons */
@@ -168,7 +168,7 @@ button:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 8px; /* Standard spacing on Zumiez */
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 /* Styling for the unselected size buttons */
@@ -186,7 +186,6 @@ button:hover {
     text-decoration: none; /* Remove default link underlining */
     transition: all 0.2s;
     cursor: pointer;
-    font-family: "Hammersmith One", sans-serif;
 }
 
 /* Hover state for size buttons */
@@ -214,35 +213,11 @@ button:hover {
     text-transform: uppercase;
     cursor: pointer;
     transition: background-color 0.2s;
-    font-family: "Hammersmith One", sans-serif;
 }
 
 /* Hover state for the 'Add to Bag' button */
 .zu-add-to-bag-btn:hover {
-    background-color: #000000; /* A darker red for feedback */
-}
-#decription p {
-    text-align: left;
-    font-family: "Kings", cursive;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: bold;
-    font-size: 22px;
-}
-#decription h2 {
-    font-family: "Hammersmith One", sans-serif;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    font-size: 31px;
-}
-footer {
-    text-align: center;
-    font-family: "Hammersmith One", sans-serif;
-    font-style: italic;
-    font-weight: normal;
-    text-decoration: none;
-    text-indent: 0px;
+    background-color: #b30000; /* A darker red for feedback */
 }
 </style>
 <script type="text/javascript">
@@ -277,7 +252,7 @@ function MM_showHideLayers() { //v9.0
 </script>
 </head>
 
-<body onLoad="MM_preloadImages('Blue-back.png','Purple-back.jpg','Green-back.jpg')">
+<body onLoad="MM_preloadImages('Blue-back.png','Purple front.jpg','Green-front.jpg','Purple-back.jpg')">
 <wrapper>
   <header class="zumiez-header">
     <div class="utility-bar">
@@ -296,7 +271,7 @@ function MM_showHideLayers() { //v9.0
       <div class="logo">ZUMIEZ</div>
       
       <div class="search-container">
-        <input type="text" placeholder="What are you looking for?">
+        <input type="text" placeholder="Search for brands, styles, or items...">
         <button class="search-btn">🔍</button>
       </div>
 
@@ -321,28 +296,20 @@ function MM_showHideLayers() { //v9.0
       </ul>
     </div>
   </nav>
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kings&display=swap" rel="stylesheet">
-	  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-	  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap" rel="stylesheet">
   </header>
   <main>
-    <section id="product"> <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('blueshirt2','','Blue-back.png',1)"><img src="Blue-front.png" alt="blue shirt" width="730" height="866" id="blueshirt2"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Purpleshirt2','','Purple-back.jpg',1)"><img src="Purple-front.jpg" alt="Purple shirt" width="730" height="866" id="Purpleshirt2"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Greenshirt2','','Green-back.jpg',1)"><img src="Green-front.jpg" alt="Green shirt" width="730" height="866" id="Greenshirt2"></a> </section>
+    <section id="product">
+	  <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('blueshirt','','Blue-back.png',1)"><img src="Blue-front.png" alt="Blue Shirt" width="730" height="866" id="blueshirt"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Prurpleshirt','','Purple front.jpg',1)"><img src="Purple-front.jpg" alt="Purple Shirt" width="650" height="866" id="Prurpleshirt"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Greenshirt','','Green-front.jpg',1)"><img src="Green-front.jpg" alt="Green shirt" width="650" height="866" id="Greenshirt"></a> </section>
 <section id="decription">
       <h2>Affliction T-Shirt</h2>
 		<p>This Affliction t-shirt delivers a bold edge with its icy wash and layered graphics. The front showcases black screen-printed designs accented with scattered silver foil hits, giving the shirt a metallic flash from every angle. On the back, signature wing artwork and branding bring the classic Affliction aesthetic to life over a custom-dyed blue and white base.</p>
 		<h3>$49.95</h3>
-	  <button id="blueswatch" onClick="MM_showHideLayers('blueshirt','','show','Prurpleshirt','','hide','Greenshirt','','hide','blueshirt2','','show','Purpleshirt2','','hide','Greenshirt2','','hide')"></button>
-	  <button id="purpleswatch" onClick="MM_showHideLayers('blueshirt','','hide','Prurpleshirt','','show','Greenshirt','','hide','blueshirt2','','hide','Purpleshirt2','','show','Greenshirt2','','hide')"></button>
-		<button id="greenswatch" onClick="MM_showHideLayers('blueshirt','','hide','Prurpleshirt','','hide','Greenshirt','','show','blueshirt2','','hide','Purpleshirt2','','hide','Greenshirt2','','show')"></button>
+	  <button id="blueswatch" onClick="MM_showHideLayers('blueshirt','','show','Prurpleshirt','','hide','Greenshirt','','hide')"></button>
+	  <button id="purpleswatch" onClick="MM_showHideLayers('blueshirt','','hide','Prurpleshirt','','show','Greenshirt','','hide')"></button>
+		<button id="greenswatch" onClick="MM_showHideLayers('blueshirt','','hide','Prurpleshirt','','hide','Greenshirt','','show')"></button>
    <div class="zu-product-options">
     <div class="zu-size-selector-container">
-        <label class="zu-option-label">Size</label>
+        <label class="zu-option-label">Select a Size</label>
         <div class="zu-size-options-group">
             <a href="#" class="zu-size-button" data-size="S">S</a>
             <a href="#" class="zu-size-button" data-size="M">M</a>
@@ -356,10 +323,9 @@ function MM_showHideLayers() { //v9.0
         <button type="button" class="zu-add-to-bag-btn">Add to Bag</button>
     </div>
 </div>
-    </section>
+	  </section>
   </main>
-  <footer><p>&copy; 2026, Hailey Ballard. This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category.</p>
-  </footer>
+  <footer></footer>
 </wrapper>
 </body>
 </html>
