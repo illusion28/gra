@@ -39,13 +39,185 @@ button:hover {
     background-color: #8DC3E3;
 }
 #purpleswatch {
-    background-color: #AE65DA;
+    background-color: #7D2782;
 }
 #greenswatch {
-    background-color: #92C28A;
+    background-color: #00C58B;
 }
 #product {
     position: relative;
+}
+:root {
+  --zumiez-black: #000000;
+  --zumiez-white: #ffffff;
+  --zumiez-gray: #f4f4f4;
+  --zumiez-red: #d0021b; /* Used for Sale text */
+}
+
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+/* 1. Utility Bar */
+.utility-bar {
+  background-color: var(--zumiez-black);
+  color: white;
+  font-size: 11px;
+  text-transform: uppercase;
+  padding: 8px 0;
+}
+
+.utility-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+/* 2. Main Header */
+.main-header {
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  cursor: pointer;
+}
+
+.search-container {
+  flex: 0 1 500px; /* Takes up space but has a max limit */
+  display: flex;
+  border: 1px solid #ccc;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+}
+
+.search-btn {
+  background: white;
+  border: none;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+/* 3. Navigation Bar */
+.nav-bar {
+  background: var(--zumiez-white);
+  border-bottom: 4px solid var(--zumiez-black); /* Thick bottom border is very Zumiez */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.nav-links li a {
+  display: block;
+  padding: 15px 0;
+  text-decoration: none;
+  color: var(--zumiez-black);
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+.nav-links li a.sale {
+  color: var(--zumiez-red);
+}	
+	/* Container for the new size and cart sections */
+.zu-product-options {
+    margin-top: 20px;
+    font-family: Arial, sans-serif; /* Matches typical e-commerce fonts */
+}
+
+/* Label above the size buttons */
+.zu-option-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* Flex group for size buttons */
+.zu-size-options-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Standard spacing on Zumiez */
+    margin-bottom: 25px;
+}
+
+/* Styling for the unselected size buttons */
+.zu-size-button {
+    display: block;
+    width: 44px; /* Standard square button size */
+    height: 44px;
+    border: 1px solid #ccc; /* Default border color */
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 44px; /* Vertically center the text */
+    text-decoration: none; /* Remove default link underlining */
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+/* Hover state for size buttons */
+.zu-size-button:hover {
+    border-color: #666;
+}
+
+/* The 'active' state styled exactly like Zumiez */
+.zu-size-button.active {
+    background-color: #000; /* Black background on select */
+    color: #fff; /* White text on select */
+    border-color: #000;
+}
+
+/* Styling for the 'Add to Bag' button */
+.zu-add-to-bag-btn {
+    display: block;
+    width: 100%; /* Full width within the product description column */
+    padding: 15px;
+    background-color: #cc0000; /* Zumiez's signature red */
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Hover state for the 'Add to Bag' button */
+.zu-add-to-bag-btn:hover {
+    background-color: #b30000; /* A darker red for feedback */
 }
 </style>
 <script type="text/javascript">
@@ -80,14 +252,54 @@ function MM_showHideLayers() { //v9.0
 </script>
 </head>
 
-<body onLoad="MM_preloadImages('Blue-back.png','Purple front.jpg','Green-front.jpg')">
+<body onLoad="MM_preloadImages('Blue-back.png','Purple front.jpg','Green-front.jpg','Purple-back.jpg')">
 <wrapper>
-  <header>
-    <h1>Zumiez</h1>
+  <header class="zumiez-header">
+    <div class="utility-bar">
+    <div class="header-container">
+      <span class="promo-text">Free Shipping on Orders Over $50</span>
+      <div class="utility-links">
+        <a href="#">Help</a>
+        <a href="#">Order Status</a>
+        <a href="#">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-header">
+    <div class="header-container">
+      <div class="logo">ZUMIEZ</div>
+      
+      <div class="search-container">
+        <input type="text" placeholder="Search for brands, styles, or items...">
+        <button class="search-btn">🔍</button>
+      </div>
+
+      <div class="header-icons">
+        <span class="icon">Wishlist</span>
+        <span class="icon">Bag (0)</span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="nav-bar">
+    <div class="header-container">
+      <ul class="nav-links">
+        <li><a href="#" class="sale">SALE</a></li>
+        <li><a href="#">MEN'S</a></li>
+        <li><a href="#">WOMEN'S</a></li>
+        <li><a href="#">SHOES</a></li>
+        <li><a href="#">ACCESSORIES</a></li>
+        <li><a href="#">SKATE</a></li>
+        <li><a href="#">SNOW</a></li>
+        <li><a href="#">BRANDS</a></li>
+      </ul>
+    </div>
+  </nav>
   </header>
   <main>
     <section id="product">
-	  <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('blueshirt','','Blue-back.png',1)"><img src="Blue-front.png" alt="Blue Shirt" width="730" height="866" id="blueshirt"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Prurpleshirt','','Purple front.jpg',1)"><img src="Purple front.jpg" alt="Purple Shirt" width="650" height="866" id="Prurpleshirt"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Greenshirt','','Green-front.jpg',1)"><img src="Green-front.jpg" alt="Green shirt" width="650" height="866" id="Greenshirt"></a> </section>
+	  <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('blueshirt','','Blue-back.png',1)"><img src="Blue-front.png" alt="Blue Shirt" width="730" height="866" id="blueshirt"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Prurpleshirt','','Purple front.jpg',1)"><img src="Purple-front.jpg" alt="Purple Shirt" width="650" height="866" id="Prurpleshirt"></a><a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Greenshirt','','Green-front.jpg',1)"><img src="Green-front.jpg" alt="Green shirt" width="650" height="866" id="Greenshirt"></a> </section>
 <section id="decription">
       <h2>Affliction T-Shirt</h2>
 		<p>This Affliction t-shirt delivers a bold edge with its icy wash and layered graphics. The front showcases black screen-printed designs accented with scattered silver foil hits, giving the shirt a metallic flash from every angle. On the back, signature wing artwork and branding bring the classic Affliction aesthetic to life over a custom-dyed blue and white base.</p>
@@ -95,7 +307,23 @@ function MM_showHideLayers() { //v9.0
 	  <button id="blueswatch" onClick="MM_showHideLayers('blueshirt','','show','Prurpleshirt','','hide','Greenshirt','','hide')"></button>
 	  <button id="purpleswatch" onClick="MM_showHideLayers('blueshirt','','hide','Prurpleshirt','','show','Greenshirt','','hide')"></button>
 		<button id="greenswatch" onClick="MM_showHideLayers('blueshirt','','hide','Prurpleshirt','','hide','Greenshirt','','show')"></button>
-    </section>
+   <div class="zu-product-options">
+    <div class="zu-size-selector-container">
+        <label class="zu-option-label">Select a Size</label>
+        <div class="zu-size-options-group">
+            <a href="#" class="zu-size-button" data-size="S">S</a>
+            <a href="#" class="zu-size-button" data-size="M">M</a>
+            <a href="#" class="zu-size-button" data-size="L">L</a>
+            <a href="#" class="zu-size-button" data-size="XL">XL</a>
+            <a href="#" class="zu-size-button" data-size="XXL">XXL</a>
+        </div>
+    </div>
+
+    <div class="zu-actions-container">
+        <button type="button" class="zu-add-to-bag-btn">Add to Bag</button>
+    </div>
+</div>
+	  </section>
   </main>
   <footer></footer>
 </wrapper>
