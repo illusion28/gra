@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>pokemon hover</title>
+<style>
+	
+	body{
+		margin:0px;
+		background-color: #A680BC;
+	}
+	
+	wrapper{
+    width: 1366px;
+    display: block;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+	}
+main {
+    background-image: url(background.png);
+    height: 800px;
+    background-size: cover;
+}
+	svg{
+		width:100%;
+	}
+	#eevee,#espeon,#sylveon,#flareon,#jolteon{
+		visibility: hidden;
+	}
+	#blue-layer:hover #eevee,#pink-layer:hover #espeon,#red-layer:hover #sylveon,#purple-layer:hover #flareon,#pastel-layer:hover #jolteon{
+		visibility:visible;
+	}
+	
+	#background {
+    visibility: hidden;
+}
+	footer{
+		text-align: center
+	}
+</style>
+	
+</head>
+
+<body>
+<wrapper>
+<main>
+  <svg xmlns="http://www.w3.org/2000/svg" width="1025.84" height="570.17" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1025.84 570.17">
+    <g id="background">
+      <image width="2017" height="1100" transform="translate(20) scale(.5)" xlink:href="background.png"/>
+      </g>
+    <g id="blue-layer">
+      <image width="820" height="454" transform="translate(32 309) scale(.26)" xlink:href="ball-blue.png"/>
+      <image id="eevee" width="475" height="475" transform="translate(0 159) scale(.77)" xlink:href="eevee.png"/>
+      </g>
+    <g id="pink-layer">
+      <image width="554" height="554" transform="translate(417 221) scale(.13)" xlink:href="ball-pink.png"/>
+      <image id="espeon" width="600" height="600" transform="translate(307 20) scale(.47)" xlink:href="espeon.png"/>
+      </g>
+    <g id="red-layer">
+      <image width="2674" height="2520" transform="translate(479 442) scale(.03)" xlink:href="ball-one.png"/>
+      <image id="sylveon" width="1887" height="1887" transform="translate(407 298) scale(.13)" xlink:href="sylveon.png"/>
+      </g>
+    <g id="purple-layer">
+      <image width="820" height="850" transform="translate(805 213) scale(.11)" xlink:href="ball-purple.png"/>
+      <image id="flareon" width="475" height="475" transform="translate(756 123) scale(.53)" xlink:href="flareon.png"/>
+      </g>
+    <g id="pastel-layer">
+      <image width="600" height="600" transform="translate(782 402) scale(.15)" xlink:href="ball-pastel.png"/>
+      <image id="jolteon" width="475" height="475" transform="translate(725 302) scale(.52 .56)" xlink:href="jolteon.png"/>
+      </g>
+  </svg>
+</main>
+<footer> © 2026, Hailey Ballard
+  This is a fictitious web page created solely for the purpose of education and training. All products and people associated with this web page are also fictitious. Any resemblance to real brands, products, or people is purely coincidental. Information provided about the product is also fictitious and should not be construed to be representative of actual products on the market in a similar product category. </footer>
+</wrapper>
+</body>
+</html>
