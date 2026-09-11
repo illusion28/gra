@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SVG Animations Using CSS</title>
+<style>
+body{
+	margin:0;
+	padding:0;
+	background-color:#CCC;
+	}
+wrapper{
+	width:100%;
+	max-width:1024px;
+	margin:0 auto;
+	display:block;
+	}
+header{
+	height:150px;
+	background-color:#19B5E3;
+	}
+main{
+	height:768px;
+	background-color:#FFF;
+	padding:4em 0;
+	box-sizing:border-box;
+	text-align:center;
+	}
+footer{
+	height:80px;
+	background-color:#19B5E3;
+	clear:both;
+	}
+	#level{
+		animation:charging 2s infinite linear alternate;
+	}
+	@keyframes charging{
+		0%{transform: scaleX(0);}
+		100%{transfirm: scaleX(1);
+		transform-origin: 29.7%;}
+	}
+	#landr{
+		animation: spinning 5s infinite linear;
+	}
+	@keyframes spinning{
+		0%{
+			transform: rotate(0deg);
+			transform-origin: center;
+		}
+		100%{transform: rotate(360deg);}
+	}
+	#battery{
+		animation: moving 5s linear infinite alternate;
+	}
+	@keyframes moving{
+		0%{
+			transfrom: translateX(-100px);
+			transform-origin: center;
+		}
+		50%{tramsfrom: translateX(200px);
+			transform-origin: center;
+		}
+		100%{
+			transform: translateX(-100px);
+			transform-origin: center;
+		}
+	}
+</style>
+</head>
+
+<body>
+    <wrapper>
+        <header>
+        </header>
+                
+        <main>
+	<?xml version="1.0" encoding="UTF-8"?>
+<svg id="battery" xmlns="http://www.w3.org/2000/svg" width="219.5" height="66" viewBox="0 0 219.5 66">
+  <g id="landr">
+    <rect id="level" x="4.58" y="5" width="198.88" height="56" fill="#7ac25b"/>
+    <path id="outline" d="M219.5,14.25h-11.46V0H0v66h208.04v-14.25h11.46V14.25ZM198.88,56H9.16V10h189.71v46Z" fill="#231f20"/>
+  </g>
+</svg>
+        </main>
+        
+        <footer>
+        </footer>
+    </wrapper>
+</body>
+</html>
