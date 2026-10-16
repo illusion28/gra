@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Responsive Navigation | Hailey Ballard, 2026</title>
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+body {
+    margin: 0;
+    background-color: lightgreen;
+}
+wrapper {
+    width: 80%;
+    margin: auto;
+    display: block;
+    padding: 20px;
+    background-color: rgba(255,255,255,0.50);
+}
+section {
+    height: 500px;
+}
+nav {
+    background-color: darkgreen;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+a li {
+    padding: 15px;
+    list-style-type: none;
+    border-bottom: thin solid white;
+}
+a li:hover {
+    background-color: green;
+}
+.topnav.responsive a{
+    display:block;
+}
+.topnav.responsive a:not(:first-child) {
+     display: none;
+}
+	.topnav .fa-bars {
+    display: none;
+}
+.topnav .fa-times {
+    display: block;
+}
+.topnav.responsive .fa-bars {
+    display: block;
+}
+.topnav.responsive .fa-times {
+    display: none;
+}
+#myTopnav a {
+    color: white;
+}
+#myTopnav {
+    padding: 5px;
+}
+@media (min-width:600px) {
+.topnav a:not(:first-child),.topnav.responsive a:not(:first-child) {
+    display:inline-block;
+     }
+.topnav .fa.fa-bars {
+     display:none;
+     }
+}
+</style>
+	<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+header {
+  background-color: 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 48px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.logo img {
+  height: 10px;
+  width: auto;
+  display: block;
+}
+
+header nav {
+  display: flex;
+  gap: 3px;
+}
+
+header nav a {
+  color:
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+header nav a:hover {
+  color:
+}
+header img {
+  height: 40px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
+	/* Hero Banner */
+.hero-section {
+  width: 100%;
+  height: 480px;
+  background-image: url("ezgif-23b79d96771b0d1a.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Semi-transparent Dark Overlay */
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35); /* Darkens image for readable text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* Hero Typography */
+.hero-content h1 {
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-content p {
+  color: #f1f1f1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin: 0;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* About Us Section */
+.about-section {
+  background-color: #ffffff;
+  padding: 60px 24px;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-container h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #222222;
+  margin: 0 0 16px 0;
+}
+
+.about-container p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555555;
+  margin: 0;
+}
+	html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+}
+</script>
+</head>
+
+<body>
+<wrapper>
+  <header>
+	  <div class="logo">
+    <a href="#">
+      <img src="Terminx-JPEG.jpg" alt="Logo">
+    </a>
+  </div>
+    <nav class="topnav responsive" id="myTopnav">
+		<a href="javascript:void(0);" class="icon"
+     onclick="myFunction()">
+  <i class="fa fa-bars"></i><i class="fa fa-times"></i>
+     
+        <a href="#home"><li>Home</li></a>
+        <a href="#services"><li>Services</li></a>
+        <a href="#contact"><li>Contact</li></a>
+
+		</a>
+    </nav>
+  </header>
+  <main>
+	
+    <section id="home" class="hero-section">
+     <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>Welcome to Terminix</h1>
+        <p>Your trusted partner in creating stunning outdoor spaces.</p>
+      </div>
+    </div>
+    </section>
+    <section id="services" class="about-section">
+     <div class="about-container">
+      <h2>Services</h2>
+      <p>
+       Terminix provides professional pest control, termite management, rodent removal, and home-improvement services for residential and commercial properties.
+      </p>
+    </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+    </section>
+  </main>
+  <footer></footer>
+</wrapper>
+</body>
+</html>
